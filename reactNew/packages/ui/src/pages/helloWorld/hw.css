@@ -1,0 +1,233 @@
+.inpt, .makeBlack {
+    color: black;
+}
+
+/* Scoped styles for the form container */
+.colorful-form-container {
+    background: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 2px solid #ff8c00;
+    margin: 20px auto; /* Centers the form without affecting full screen */
+}
+
+/* Scoped input styles */
+.colorful-form-group {
+    margin-bottom: 20px;
+}
+
+.colorful-label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333; /* Dark text color */
+    margin-bottom: 8px;
+}
+
+.colorful-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ff8c00;
+    border-radius: 6px;
+    background-color: #fef9e7; /* Light yellow background for input */
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.colorful-input:focus {
+    border-color: #ff4500;
+    box-shadow: 0 0 5px #ff4500;
+    outline: none;
+}
+
+/* Scoped button styles */
+.colorful-button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.colorful-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #333; /* Button outline */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    color: #333; /* Dark text color */
+    background-color: #eaeaea; /* Light gray background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effect */
+.colorful-btn:hover {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text on hover */
+    transform: translateY(-3px);
+}
+
+/* Specific button colors */
+.colorful-btn-submit {
+    background-color: #90ee90; /* Light green */
+    border-color: #28a745;
+}
+
+.colorful-btn-submit:hover {
+    background-color: #28a745;
+}
+
+.colorful-btn-form {
+    background-color: #87cefa; /* Light blue */
+    border-color: #007bff;
+}
+
+.colorful-btn-form:hover {
+    background-color: #007bff;
+}
+
+.colorful-btn-history {
+    background-color: #ffdd57; /* Light yellow */
+    border-color: #ffc107;
+}
+
+.colorful-btn-history:hover {
+    background-color: #ffc107;
+}
+
+/*spawn history*/
+
+.vehicle-table-container {
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.table-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.close-button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.close-button:hover {
+    background-color: #d43f40;
+    color: #ffffff;
+}
+
+.vehicle-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f8f9fa;
+}
+
+
+.vehicle-table thead {
+    background-color: #007bff;
+    color: #ffffff;
+    position: sticky;
+    top: 0; 
+    z-index: 1;
+}
+
+.vehicle-table th {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.vehicle-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e9ecef;
+    color: #333333;
+    font-size: 14px;
+    text-align: left;
+}
+
+.vehicle-table tbody {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%; 
+}
+
+.vehicle-table thead tr,
+.vehicle-table tbody tr {
+    display: table;
+    width: 100%; 
+    table-layout: fixed; 
+}
+
+.no-data {
+    text-align: center;
+    color: #999999;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.vehicle-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.vehicle-table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+
+.vehicle-table tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 768px) {
+    .vehicle-table-container {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .vehicle-table {
+        min-width: 500px;
+    }
+}
+
+
+
+
+
+
+
+
+
