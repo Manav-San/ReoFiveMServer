@@ -1,23 +1,23 @@
 
 const ox = global.exports['oxmysql'];
 
-function addPlayer(source:number) {
+async function addPlayer(source:number) {
   console.log('Initiating Player Check')
   const player = source;
   const ID = getPlayerIdentifiers(player);
   const discordid = ID[1];
 
   const sqlCrt = `CREATE TABLE IF NOT EXISTS users (
-    discord VARCHAR(255),
+    discord VARCHAR(255)
   )`;
 
-  ox.execute(sqlCrt, [], (result:any) => {
+  await ox.execute(sqlCrt, [], (result:any) => {
     if(result.length > 1) {
       console.log("User table has been created")
     }
   });
 
-  ox.execute('SELECT * FROM users WHERE discord = ?', [discordid], (result:any) => {
+  await ox.execute('SELECT * FROM users WHERE discord = ?', [discordid], (result:any) => {
     if(result.length === 0) {
       ox.execute('INSERT INTO users (discord) VALUES (?)', [discordid], (result:any) => {
         if(result.length > 0) {
